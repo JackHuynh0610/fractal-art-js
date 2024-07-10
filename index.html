@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractal Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Fractal</h1>
+    <div class="text">
+        <p>A fractal is a complex geometric shape that can be split into parts,
+            each of which is a reduced-scale copy of the whole.
+            This self-similar pattern repeats at progressively smaller scales, creating intricate and often beautiful
+            designs. Fractals are not limited to geometry; they can also describe patterns in nature, economics, and
+            other fields, offering insights into the underlying structures of seemingly chaotic systems.</p>
+        <p><b>Notice</b>: Do not input big number as the algorithm using recursion with no optimization. It will cause
+            stack overflow error or crash.</p>
+        <p>Made by: <a href="https://jacknghia.com">Jack Huynh</a></p>
+    </div>
+    <div class="container">
+        <form id="treeConfigForm">
+            <label for="color">Color: <input type="color" id="color"><br></label>
+            <label for="branchLength">Length (Branch length): <input type="number" id="branchLength" value="70"><br></label>
+
+            <label for="angle">Angle (Degree): <input type="number" id="angle" value="25"><br></label>
+
+            <label for="ratio">Ratio 
+                (The resize length after each recursion. Basically scaling for the fractal): 
+                <input type="fraction" id="ratio" value="0.8"><br></label>
+
+            <label for="thickness">Thickness (The thickness of the drawing line): <input type="number" id="thickness" value="2"><br></label>
+
+            <label for="depth">Depth (number of interations): <input type="number" id="depth" value="10"><br></label>
+
+            <button type="submit">Update Tree</button>
+        </form>
+        <br>
+        <canvas id="fractalCanvas" width="400" height="400"></canvas>
+        <br>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
